@@ -1,0 +1,305 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12248,        297]
+NotebookOptionsPosition[     11824,        281]
+NotebookOutlinePosition[     12167,        296]
+CellTagsIndexPosition[     12124,        293]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Clear", "[", 
+     RowBox[{"na", ",", "nb"}], "]"}], ";", 
+    RowBox[{"Grid", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+          RowBox[{"\"\<p = \>\"", "<>", 
+           RowBox[{"ToString", "[", "p", "]"}]}], ",", 
+          RowBox[{"FontSize", "\[Rule]", "25"}]}], "]"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"Show", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"StreamPlot", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "na"}], " ", "*", "nb"}], " ", "+", " ", 
+                SuperscriptBox[
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "p", "-", "na", "-", "nb"}], ")"}], "2"], 
+                "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "p", "-", "na", "-", "nb"}], ")"}], "*", 
+                 "na"}], "+", 
+                RowBox[{
+                 FractionBox["3", "2"], "p", "*", 
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "p", "-", "na", "-", "nb"}], ")"}]}]}], 
+               ",", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "na"}], " ", "*", "nb"}], " ", "+", " ", 
+                SuperscriptBox[
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "p", "-", "na", "-", "nb"}], ")"}], "2"], 
+                "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "p", "-", "na", "-", "nb"}], ")"}], "*", 
+                 "nb"}], " ", "-", " ", 
+                RowBox[{"p", "*", "nb"}]}]}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"na", ",", "0", ",", 
+               RowBox[{"1", "-", "p"}]}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"nb", ",", "0", ",", 
+               RowBox[{"1", "-", "p"}]}], "}"}], ",", 
+             RowBox[{"RegionFunction", "\[Rule]", 
+              RowBox[{"Function", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"na", ",", "nb", ",", "vna", ",", "vnb", ",", "n"}], 
+                 "}"}], ",", 
+                RowBox[{"nb", "<", 
+                 RowBox[{"1", "-", "p", "-", "na"}]}]}], "]"}]}], ",", 
+             RowBox[{"VectorScale", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"Small", ",", "0.5"}], "}"}]}], ",", 
+             RowBox[{"PlotRange", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "0.05"}], ",", "1.05"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "0.05"}], ",", "1.05"}], "}"}]}], "}"}]}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", "400"}]}], "]"}], ",", 
+           RowBox[{"RegionPlot", "[", 
+            RowBox[{
+             RowBox[{"nb", "<", 
+              RowBox[{"1", "-", "p", "-", "na"}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{"na", ",", "0", ",", "1"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"nb", ",", "0", ",", "1"}], "}"}], ",", 
+             RowBox[{"PlotRange", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "0.05"}], ",", "1.05"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "0.05"}], ",", "1.05"}], "}"}]}], "}"}]}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", "400"}]}], "]"}], ",", 
+           RowBox[{"ListPlot", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"na", ",", "nb"}], "}"}], "/.", 
+              RowBox[{"NSolve", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "na"}], " ", "*", "nb"}], " ", "+", " ", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"1", "-", "p", "-", "na", "-", "nb"}], ")"}], 
+                    "2"], "+", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"1", "-", "p", "-", "na", "-", "nb"}], ")"}], "*",
+                     "na"}], "+", 
+                    RowBox[{
+                    FractionBox["3", "2"], "p", "*", 
+                    RowBox[{"(", 
+                    RowBox[{"1", "-", "p", "-", "na", "-", "nb"}], ")"}]}]}], 
+                   "\[Equal]", "0"}], ",", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "na"}], " ", "*", "nb"}], " ", "+", " ", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"1", "-", "p", "-", "na", "-", "nb"}], ")"}], 
+                    "2"], "+", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"1", "-", "p", "-", "na", "-", "nb"}], ")"}], "*",
+                     "nb"}], " ", "-", " ", 
+                    RowBox[{"p", "*", "nb"}]}], "\[Equal]", "0"}]}], "}"}], 
+                ",", 
+                RowBox[{"{", 
+                 RowBox[{"na", ",", "nb"}], "}"}], ",", "Reals"}], "]"}]}], 
+             ",", 
+             RowBox[{"PlotStyle", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"Red", ",", 
+                RowBox[{"PointSize", "[", "0.015", "]"}]}], "}"}]}], ",", 
+             RowBox[{"PlotRange", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "0.05"}], ",", "1.05"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "0.05"}], ",", "1.05"}], "}"}]}], "}"}]}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", "400"}]}], "]"}]}], "}"}], "]"}],
+         "}"}]}], "}"}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"p", ",", "0", ",", "1", ",", "0.005"}], "}"}], ",", 
+   RowBox[{"FrameLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+     "\"\<\!\(\*SubscriptBox[\(n\), \(a\)]\)\>\"", ",", 
+      "\"\<\!\(\*SubscriptBox[\(n\), \(b\)]\)\>\""}], "}"}]}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQA2IQ7fZRzGqv/htHfvdoNxCdFemeBaJjnPgKQfTWWVIV
+IDpp6flqED2VxbgRrF5yeguInmSX3AuiN+T3gulZ13gmg8Vnrp8KotkU8maD
+aAWRwJUg+t22sA0gmvvSvV0get3lp89BtFkJ5zsQ7dAY+BdEexT9/w+ir9jd
+YdkHpFmiPoPpFN5cLhCtsq1AFETvY5kqDaIbHQWVQDTflRoNEH1i1S49EB1w
+5bIRWP3fO2Baoco4EkRvMnkQDaLL774S2Q+kt/030QDRW56+0gHRfeLWFiA6
+J/C2LYjWED/nAKLTd0x2AdFHPs8F0wGCLXJPgbRzUKASiF6lWC/yAUS/ZRYF
+0QDfl6zB
+  "],
+ CellLabel->"In[5]:=",ExpressionUUID->"ab24424e-03fa-4c16-b8fe-211ce021d6e2"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`p$$ = 0., Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`p$$], 0, 1, 0.005}}, Typeset`size$$ = {
+    400., {209., 215.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`p$57116$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`p$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`p$$, $CellContext`p$57116$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> (Clear[$CellContext`na, $CellContext`nb]; Grid[{{
+           Style[
+            StringJoin["p = ", 
+             ToString[$CellContext`p$$]], FontSize -> 25]}, {
+           Show[{
+             
+             StreamPlot[{(-$CellContext`na) $CellContext`nb + (
+                 1 - $CellContext`p$$ - $CellContext`na - $CellContext`nb)^2 + \
+(1 - $CellContext`p$$ - $CellContext`na - $CellContext`nb) $CellContext`na + \
+((3/2) $CellContext`p$$) (
+                 1 - $CellContext`p$$ - $CellContext`na - $CellContext`nb), \
+(-$CellContext`na) $CellContext`nb + (
+                 1 - $CellContext`p$$ - $CellContext`na - $CellContext`nb)^2 + \
+(1 - $CellContext`p$$ - $CellContext`na - $CellContext`nb) $CellContext`nb - \
+$CellContext`p$$ $CellContext`nb}, {$CellContext`na, 0, 
+               1 - $CellContext`p$$}, {$CellContext`nb, 0, 
+               1 - $CellContext`p$$}, RegionFunction -> 
+              Function[{$CellContext`na$, $CellContext`nb$, \
+$CellContext`vna$, $CellContext`vnb$, $CellContext`n$}, $CellContext`nb$ < 
+                1 - $CellContext`p$$ - $CellContext`na$], 
+              VectorScale -> {Small, 0.5}, 
+              PlotRange -> {{-0.05, 1.05}, {-0.05, 1.05}}, ImageSize -> 400], 
+             
+             RegionPlot[$CellContext`nb < 
+              1 - $CellContext`p$$ - $CellContext`na, {$CellContext`na, 0, 
+               1}, {$CellContext`nb, 0, 1}, 
+              PlotRange -> {{-0.05, 1.05}, {-0.05, 1.05}}, ImageSize -> 400], 
+             ListPlot[
+              ReplaceAll[{$CellContext`na, $CellContext`nb}, 
+               
+               NSolve[{(-$CellContext`na) $CellContext`nb + (
+                    1 - $CellContext`p$$ - $CellContext`na - \
+$CellContext`nb)^2 + (
+                    1 - $CellContext`p$$ - $CellContext`na - $CellContext`nb) \
+$CellContext`na + ((3/2) $CellContext`p$$) (
+                    1 - $CellContext`p$$ - $CellContext`na - $CellContext`nb) == 
+                 0, (-$CellContext`na) $CellContext`nb + (
+                    1 - $CellContext`p$$ - $CellContext`na - \
+$CellContext`nb)^2 + (
+                    1 - $CellContext`p$$ - $CellContext`na - $CellContext`nb) \
+$CellContext`nb - $CellContext`p$$ $CellContext`nb == 
+                 0}, {$CellContext`na, $CellContext`nb}, Reals]], 
+              PlotStyle -> {Red, 
+                PointSize[0.015]}, 
+              PlotRange -> {{-0.05, 1.05}, {-0.05, 1.05}}, ImageSize -> 
+              400]}]}}]), 
+      "Specifications" :> {{$CellContext`p$$, 0, 1, 0.005}}, 
+      "Options" :> {
+       FrameLabel -> {
+         "\!\(\*SubscriptBox[\(n\), \(a\)]\)", 
+          "\!\(\*SubscriptBox[\(n\), \(b\)]\)"}}, "DefaultOptions" :> {}],
+     ImageSizeCache->{473., {265., 271.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.7832071875409374`*^9, 3.7832296093026032`*^9, 
+  3.7832545213619127`*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"b90c40c1-c8e7-493b-99bf-fbf937a65299"]
+}, {2}]]
+},
+WindowSize->{1366, 685},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 6986, 171, 263, "Input",ExpressionUUID->"ab24424e-03fa-4c16-b8fe-211ce021d6e2"],
+Cell[7569, 195, 4242, 83, 555, "Output",ExpressionUUID->"b90c40c1-c8e7-493b-99bf-fbf937a65299"]
+}, {2}]]
+}
+]
+*)
+
